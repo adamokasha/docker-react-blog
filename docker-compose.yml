@@ -1,0 +1,31 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:3.4
+    restart: always
+    working_dir: /var/app/current
+    command: mongod
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbdata:/data/db
+  redux-blog:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./react-redux-blog
+    ports:
+      - "3000:3000"
+    volumes:
+      - var/app/current/node_modules
+      - ./react-redux-blog:/var/app/current
+  blog-api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./node-blog-api
+    ports:
+      - "4000:4000"
+    volumes:
+      - var/app/current/node_modules
+      - ./node-blog-api:/var/app/current
+volumes: #provide volume
+  mongodbdata: # create beforehand
