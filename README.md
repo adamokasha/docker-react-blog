@@ -2,7 +2,7 @@
 
 ## About
 
-React Redux Blog and API are two repos joined into one in this repository using docker.
+React Redux Blog and API are two repos joined into one in this repository using docker. The db is mongo using a docker image.
 
 ### [Link to React-Redux Blog](https://github.com/adamokasha/react-redux-blog)
 
