@@ -12,7 +12,7 @@ React Redux Blog and API are two repos joined into one in this repository using 
 
 ### Environment variables
 
-1. Create an .env file in the `react-redux-blog` directory.
+1. Create an `.env.local` file in the `react-redux-blog` directory.
 2. Add the following line:
    REACT_APP_API_URL=http://localhost:4000
 3. In the `node-blog-api/server/config` create a `config.json` file
